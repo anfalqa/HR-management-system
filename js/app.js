@@ -1,5 +1,4 @@
 'use strict';
-
 let id=1000;
 
 function Employees(employeeName,employeeDep,employeeLevel){
@@ -27,7 +26,7 @@ function Employees(employeeName,employeeDep,employeeLevel){
             return (sal-(sal*0.075));
         }
    },
-  this.generatingEmployeeID = function(){
+   this.generatingEmployeeID = function(){
     
     let counter=0;
     while (counter<1){
@@ -42,6 +41,8 @@ function Employees(employeeName,employeeDep,employeeLevel){
 
 Employees.prototype.render  =   function(){
         let str="Employee name: "+this.fullName +"<br>"+"Department: "+this.dep+"<br>"+" Employee salary: "+this.calculatingSalary();
+        return str;
+}
 
 let employee0=new Employees("Ghazi Samer","Administration","Senior");
 let employee1=new Employees('Lana Ali','Finance','Senior');
@@ -55,6 +56,9 @@ console.log(employee0.generatingEmployeeID());
 console.log(employee1.generatingEmployeeID());
 console.log(employee2.generatingEmployeeID());
 console.log(employee3.generatingEmployeeID());
+console.log(employee4.generatingEmployeeID());
+console.log(employee5.generatingEmployeeID());
+console.log(employee6.generatingEmployeeID());
 
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
