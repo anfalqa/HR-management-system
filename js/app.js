@@ -1,6 +1,9 @@
 'use strict';
+let idUnique =1000;
+
+
 let employee0= {
-    EmployeeId:"1000",
+    EmployeeId:idUnique,
     fullName:"Ghazi Samer",
     department:"Administration",
     level:"Senior",
@@ -17,7 +20,7 @@ let employee0= {
 
 
 let employee1= {
-    EmployeeId:"1001",
+    EmployeeId:idUnique+1,
     fullName:"Lana Ali",
     department:"Finance",
     level:"Senior",
@@ -32,7 +35,7 @@ let employee1= {
 }
 
 let employee2= {
-    EmployeeId:"1002",
+    EmployeeId:idUnique+2,
     fullName:"Tamara Ayoub",
     department:"Marketing",
     level:"Senior",
@@ -48,7 +51,7 @@ let employee2= {
 }
 
 let employee3= {
-    EmployeeId:"1003",
+    EmployeeId:idUnique+3,
     fullName:"Safi Walid",
     department:"Administration",
     level:"Mid-Senior",
@@ -63,7 +66,7 @@ let employee3= {
 }
 
 let employee4= {
-    EmployeeId:"1004",
+    EmployeeId:idUnique+3,
     fullName:"Omar Zaid",
     department:"Development",
     level:"Senior",
@@ -79,7 +82,7 @@ let employee4= {
 }
 
 let employee5= {
-    EmployeeId:"1005",
+    EmployeeId:idUnique+5,
     fullName:"Rana Saleh",
     department:"Development",
     level:"Junior",
@@ -95,7 +98,7 @@ let employee5= {
 }
 
 let employee6= {
-    EmployeeId:"1006",
+    EmployeeId:idUnique+6,
     fullName:"Hadi Ahmad",
     department:"Finance",
     level:"Mid-Senior",
@@ -107,7 +110,7 @@ let employee6= {
             let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
             return str;  }
 }
-
+console.log(employee5.EmployeeId);
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
 document.getElementById("demo2").innerHTML = employee2.render();
