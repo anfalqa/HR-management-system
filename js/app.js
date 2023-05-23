@@ -1,4 +1,5 @@
 'use strict';
+
 let id=1000;
 
 function Employees(employeeName,employeeDep,employeeLevel){
@@ -26,7 +27,7 @@ function Employees(employeeName,employeeDep,employeeLevel){
             return (sal-(sal*0.075));
         }
    },
-   this.generatingEmployeeID = function(){
+  this.generatingEmployeeID = function(){
     
     let counter=0;
     while (counter<1){
@@ -41,8 +42,6 @@ function Employees(employeeName,employeeDep,employeeLevel){
 
 Employees.prototype.render  =   function(){
         let str="Employee name: "+this.fullName +"<br>"+"Department: "+this.dep+"<br>"+" Employee salary: "+this.calculatingSalary();
-        return str;
-}
 
 let employee0=new Employees("Ghazi Samer","Administration","Senior");
 let employee1=new Employees('Lana Ali','Finance','Senior');
