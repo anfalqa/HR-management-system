@@ -44,7 +44,7 @@ Employees.prototype.render  =   function(){
         return str;
 }
 
-let employee0=new Employees("Ghazi Samer","Administration","Senior");
+let employee0=new Employees('Ghazi Samer','Administration','Senior');
 let employee1=new Employees('Lana Ali','Finance','Senior');
 let employee2=new Employees('Tamara Ayoub','Marketing','Senior');
 let employee3=new Employees('Safi Walid','Administration','Mid-Senior');
@@ -52,13 +52,6 @@ let employee4=new Employees('Omar Zaid','Development','Senior');
 let employee5=new Employees('Rana Saleh','Development','Junior');
 let employee6=new Employees('Hadi Ahmad','Finance','Mid-Senior');
 
-console.log(employee0.generatingEmployeeID());
-console.log(employee1.generatingEmployeeID());
-console.log(employee2.generatingEmployeeID());
-console.log(employee3.generatingEmployeeID());
-console.log(employee4.generatingEmployeeID());
-console.log(employee5.generatingEmployeeID());
-console.log(employee6.generatingEmployeeID());
 
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
