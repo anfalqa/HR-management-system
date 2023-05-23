@@ -56,6 +56,9 @@ console.log(employee0.generatingEmployeeID());
 console.log(employee1.generatingEmployeeID());
 console.log(employee2.generatingEmployeeID());
 console.log(employee3.generatingEmployeeID());
+console.log(employee4.generatingEmployeeID());
+console.log(employee5.generatingEmployeeID());
+console.log(employee6.generatingEmployeeID());
 
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
