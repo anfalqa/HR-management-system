@@ -29,11 +29,13 @@ function Employees(employeeName,employeeDep,employeeLevel){
    
 
    this.generatingEmployeeID = function(){
+
     
         this.idUnique=id;
         id=id+1;
         return(this.idUnique);
    }
+
 }
 
 Employees.prototype.render  =   function(){
@@ -56,6 +58,7 @@ employee3.generatingEmployeeID();
 employee4.generatingEmployeeID();
 employee5.generatingEmployeeID();
 employee6.generatingEmployeeID();
+
 
 
 document.getElementById("demo").innerHTML = employee0.render();
