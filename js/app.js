@@ -1,8 +1,8 @@
 'use strict';
 let id=1000;
-
+let employeesAry = [];
 function Employees(employeeName,employeeDep,employeeLevel){
-    this.idUnique=1000,
+    this.idUnique=0,
     this.fullName=employeeName,
     this.dep=employeeDep,
     this.level=employeeLevel,
@@ -27,16 +27,11 @@ function Employees(employeeName,employeeDep,employeeLevel){
         }
    },
    this.generatingEmployeeID = function(){
-    
-    let counter=0;
-    while (counter<1){
         this.idUnique=id;
         id=id+1;
-        counter=counter+1;
-    }
-
-    return this.idUnique;
-   }
+   },
+        employeeAry.push(this)
+}
 }
 
 Employees.prototype.render  =   function(){
@@ -51,6 +46,12 @@ let employee3=new Employees('Safi Walid','Administration','Mid-Senior');
 let employee4=new Employees('Omar Zaid','Development','Senior');
 let employee5=new Employees('Rana Saleh','Development','Junior');
 let employee6=new Employees('Hadi Ahmad','Finance','Mid-Senior');
+
+
+for(let i=0 ; i <= employeeId.length ; i++ ){
+    employeeId[i].generatingEmployeeID();
+    console.log(employeeId[i].idUnique);
+};
 
 
 document.getElementById("demo").innerHTML = employee0.render();
