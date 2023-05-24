@@ -1,6 +1,6 @@
 'use strict';
 let id=1000;
-let employeeId=[];
+
 function Employees(employeeName,employeeDep,employeeLevel){
     this.idUnique=0,
     this.fullName=employeeName,
@@ -13,17 +13,17 @@ function Employees(employeeName,employeeDep,employeeLevel){
             let max=2000;
             let nim=1500;
             let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return (sal-(sal*0.075));
+            return Math.round(sal-(sal*0.075));
         } else if (this.level==="Mid-Senior") {
             let max=1500;
             let nim=1000;
             let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return (sal-(sal*0.075));
+            return Math.round(sal-(sal*0.075));
         } else {
             let max=1000;
             let nim=500;
             let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return (sal-(sal*0.075));
+            return Math.round(sal-(sal*0.075));
         }
    },
    
@@ -32,8 +32,8 @@ function Employees(employeeName,employeeDep,employeeLevel){
     
         this.idUnique=id;
         id=id+1;
+        return(this.idUnique);
    }
-   employeeId.push(this);
 }
 
 Employees.prototype.render  =   function(){
@@ -49,10 +49,14 @@ let employee4=new Employees('Omar Zaid','Development','Senior');
 let employee5=new Employees('Rana Saleh','Development','Junior');
 let employee6=new Employees('Hadi Ahmad','Finance','Mid-Senior');
 
-for(let i=0 ; i <= employeeId.length ; i++ ){
-    employeeId[i].generatingEmployeeID();
-    console.log(employeeId[i].idUnique);
-};
+employee0.generatingEmployeeID();
+employee1.generatingEmployeeID();
+employee2.generatingEmployeeID();
+employee3.generatingEmployeeID();
+employee4.generatingEmployeeID();
+employee5.generatingEmployeeID();
+employee6.generatingEmployeeID();
+
 
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
