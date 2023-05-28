@@ -41,92 +41,9 @@ Employees.prototype.generatingEmployeeID  =   function(){
         return(this.idUnique);
    }
 
-   //////////
-
-
-let elem=document.getElementsByTagName("body")[0];
-let divAll= document.createElement("div");
-elem.appendChild(divAll);
-       
-        ///////
-let divA= document.createElement("div");
-divAll.appendChild(divA);
-let header4=document.createElement("h2");
-        header4.textContent=("Administration");
-        divA.appendChild(header4);
-        ///////
-let divM= document.createElement("div");
-divAll.appendChild(divM);
-let header1=document.createElement("h2");
-        header1.textContent=("Marketing");
-        divM.appendChild(header1);
-        ///////
-let divD= document.createElement("div");
-divAll.appendChild(divD);
-let header3=document.createElement("h2");
-        header3.textContent=("Development");
-        divD.appendChild(header3);
-        ////////
-
-let divF= document.createElement("div");
-divAll.appendChild(divF);
-let header2=document.createElement("h2");
-        header2.textContent=("Finance");
-        divF.appendChild(header2);
-///////////prototype function
 Employees.prototype.renderEmp  =   function(){
-        let str="Employee name: "+this.fullName +" - "+"ID: "+this.idUnique+" \n "+"Department: "+this.dep+" - "
-        +" Employee Level: "+this.level+"\n"+this.calculatingSalary();
-        
-///dom mani..
-
-
-let div1=document.createElement("div");
-
-
-    let imgEmp=document.createElement("img");
-    imgEmp.src=this.employeeImg;
-    imgEmp.alt=this.fullName;
-    imgEmp.style.height="200px";
-    div1.appendChild(imgEmp);
-
-
-    let info=document.createElement("p");
-    info.textContent=(str);
-    div1.appendChild(info);
-    
-
-    if (this.dep==="Administration"){
-        divA.appendChild(div1);
-    } else if (this.dep==="Finance"){
-        divF.appendChild(div1);
-    } else if(this.dep==="Development") {
-        divD.appendChild(div1);
-    }else {
-        divM.appendChild(div1);
-    };
-
-
-
-elem.style.backgroundColor="#C6EBC5";
-divAll.style.display= "flex";
-divA.style.display="inline-block";
-divM.style.display="inline-block";
-divF.style.display="inline-block";
-divD.style.display="inline-block";
-div1.style.border="none";
-div1.style.borderRadius = "25px";
-elem.style.color="#FA7070";
-div1.style.backgroundColor="#FBF2CF";
-div1.style.textAlign = "center"; 
-div1.style.boxShadow = "0px 0px 20px #A1C298";
-div1.style.boxSizing = "border-box";
-div1.style.width="300px";
-div1.style.margin="10px";
-div1.style.height="300px";
-};
-
-
+    document.write("<br>"+"Employee name: "+this.fullName +"<br>"+"Department: "+this.dep+"<br>"+" Employee salary: "+this.calculatingSalary()+"<br>");
+    }
 
 
 let employee0=new Employees('Ghazi Samer','Administration','Senior',"./assets/Ghazi.jpg");
@@ -143,3 +60,4 @@ for (let i = 0; i < allemp.length; i++) {
     allemp[i].renderEmp();
   }
 
+console.log(employee4.idUnique);
