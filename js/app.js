@@ -29,20 +29,20 @@ function Employees(employeeName,employeeDep,employeeLevel,img){
             return Math.round(sal-(sal*0.075));
         }
    },
-   
+ 
+   allemp.push(this);
+};  
 /////////////
-   this.generatingEmployeeID = function(){
+Employees.prototype.generatingEmployeeID  =   function(){ 
 
     
         this.idUnique=id;
         id=id+1;
         return(this.idUnique);
    }
-<
+
    //////////
 
-   allemp.push(this);
-};
 
 let elem=document.getElementsByTagName("body")[0];
 let divAll= document.createElement("div");
