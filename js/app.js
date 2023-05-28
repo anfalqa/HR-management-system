@@ -1,9 +1,13 @@
 'use strict';
-let idUnique =1000;
-
+let idUnique =999; 
+function generateUniqueID(){
+   
+   idUnique=idUnique+1
+    return(idUnique);
+}
 
 let employee0= {
-    EmployeeId:idUnique,
+    EmployeeId:generateUniqueID(),
     fullName:"Ghazi Samer",
     department:"Administration",
     level:"Senior",
@@ -20,8 +24,8 @@ let employee0= {
 
 
 let employee1= {
-    EmployeeId:idUnique+1,
-    fullName:"Lana Ali",
+    EmployeeId:generateUniqueID(),
+        fullName:"Lana Ali",
     department:"Finance",
     level:"Senior",
     imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
@@ -35,7 +39,7 @@ let employee1= {
 }
 
 let employee2= {
-    EmployeeId:idUnique+2,
+    EmployeeId:generateUniqueID(),
     fullName:"Tamara Ayoub",
     department:"Marketing",
     level:"Senior",
@@ -51,7 +55,7 @@ let employee2= {
 }
 
 let employee3= {
-    EmployeeId:idUnique+3,
+    EmployeeId:generateUniqueID(),
     fullName:"Safi Walid",
     department:"Administration",
     level:"Mid-Senior",
@@ -66,7 +70,7 @@ let employee3= {
 }
 
 let employee4= {
-    EmployeeId:idUnique+3,
+    EmployeeId:generateUniqueID(),
     fullName:"Omar Zaid",
     department:"Development",
     level:"Senior",
@@ -82,7 +86,7 @@ let employee4= {
 }
 
 let employee5= {
-    EmployeeId:idUnique+5,
+    EmployeeId:generateUniqueID(),
     fullName:"Rana Saleh",
     department:"Development",
     level:"Junior",
@@ -98,7 +102,7 @@ let employee5= {
 }
 
 let employee6= {
-    EmployeeId:idUnique+6,
+    EmployeeId:generateUniqueID(),
     fullName:"Hadi Ahmad",
     department:"Finance",
     level:"Mid-Senior",
