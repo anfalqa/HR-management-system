@@ -32,11 +32,13 @@ function Employees(employeeName,employeeDep,employeeLevel,img){
    
 /////////////
    this.generatingEmployeeID = function(){
+
     
         this.idUnique=id;
         id=id+1;
         return(this.idUnique);
    }
+<
    //////////
 
    allemp.push(this);
