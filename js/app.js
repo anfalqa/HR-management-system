@@ -1,4 +1,5 @@
 'use strict';
+
 let idUnique =999; 
 function generateUniqueID(){
    
@@ -51,8 +52,7 @@ let employee2= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
         return str;
-    }
-}
+
 
 let employee3= {
     EmployeeId:generateUniqueID(),
@@ -114,7 +114,8 @@ let employee6= {
             let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
             return str;  }
 }
-console.log(employee5.EmployeeId);
+
+
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
 document.getElementById("demo2").innerHTML = employee2.render();
@@ -122,3 +123,6 @@ document.getElementById("demo3").innerHTML = employee3.render();
 document.getElementById("demo4").innerHTML = employee4.render();
 document.getElementById("demo5").innerHTML = employee5.render();
 document.getElementById("demo6").innerHTML = employee6.render();
+
+
+
