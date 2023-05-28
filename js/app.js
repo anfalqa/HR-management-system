@@ -52,7 +52,8 @@ let employee2= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
         return str;
-
+    }
+}
 
 let employee3= {
     EmployeeId:generateUniqueID(),
