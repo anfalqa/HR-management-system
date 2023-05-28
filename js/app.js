@@ -1,63 +1,128 @@
 'use strict';
-let id=1000;
-const allemp = [];
 
-function Employees(employeeName,employeeDep,employeeLevel,img){
-    this.idUnique=0,
-    this.fullName=employeeName,
-    this.dep=employeeDep,
-    this.level=employeeLevel,
-    this.employeeImg=img,
+let idUnique =999; 
+function generateUniqueID(){
+   
+   idUnique=idUnique+1
+    return(idUnique);
+}
 
-
-    ////////////
-    this.calculatingSalary =function(){
-        if (this.level==="Senior") {
-            let max=2000;
-            let nim=1500;
-            let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return Math.round(sal-(sal*0.075));
-        } else if (this.level==="Mid-Senior") {
-            let max=1500;
-            let nim=1000;
-            let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return Math.round(sal-(sal*0.075));
-        } else {
-            let max=1000;
-            let nim=500;
-            let sal=  Math.floor(Math.random() * (max - nim + 1) + nim)
-            return Math.round(sal-(sal*0.075));
-        }
-   },
- 
-   allemp.push(this);
-};  
-/////////////
-Employees.prototype.generatingEmployeeID  =   function(){ 
-
-    
-        this.idUnique=id;
-        id=id+1;
-        return(this.idUnique);
-   }
-
-Employees.prototype.renderEmp  =   function(){
-    document.write("<br>"+"Employee name: "+this.fullName +"<br>"+"Department: "+this.dep+"<br>"+" Employee salary: "+this.calculatingSalary()+"<br>");
+let employee0= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Ghazi Samer",
+    department:"Administration",
+    level:"Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+       let sal=  Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)
+       return (sal-(sal*0.075));
+    },
+    render:function(){
+        let str="Employee name: "+this.fullName +"<br>"+ "Employee salary: "+this.salary();
+        return str;
     }
+}
 
 
-let employee0=new Employees('Ghazi Samer','Administration','Senior',"./assets/Ghazi.jpg");
-let employee1=new Employees('Lana Ali','Finance','Senior',"./assets/Lana.jpg");
-let employee2=new Employees('Tamara Ayoub','Marketing','Senior',"./assets/Tamara.jpg");
-let employee3=new Employees('Safi Walid','Administration','Mid-Senior',"./assets/Safi.jpg");
-let employee4=new Employees('Omar Zaid','Development','Senior',"./assets/Omar.jpg");
-let employee5=new Employees('Rana Saleh','Development','Junior',"./assets/Rana.jpg");
-let employee6=new Employees('Hadi Ahmad','Finance','Mid-Senior',"./assets/Hadi.jpg");
+let employee1= {
+    EmployeeId:generateUniqueID(),
+        fullName:"Lana Ali",
+    department:"Finance",
+    level:"Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)
+        return (sal-(sal*0.075));},
+        render:function(){
+            let str="Employee name: "+this.fullName +"<br>"+ "Employee salary: "+this.salary();
+            return str;
+        }
+}
+
+let employee2= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Tamara Ayoub",
+    department:"Marketing",
+    level:"Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)
+       return (sal-(sal*0.075));
+    },
+    render:function(){
+        let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
+        return str;
 
 
-for (let i = 0; i < allemp.length; i++) {
-    allemp[i].generatingEmployeeID();
-    allemp[i].renderEmp();
-  }
+let employee3= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Safi Walid",
+    department:"Administration",
+    level:"Mid-Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (1500 - 1000 + 1) + 1000)
+        return (sal-(sal*0.075))},
+        render:function(){
+            let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
+            return str;
+        }
+}
 
-console.log(employee4.idUnique);
+let employee4= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Omar Zaid",
+    department:"Development",
+    level:"Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (2000 - 1500 + 1) + 1500)
+       return (sal-(sal*0.075));
+    },
+    render:function(){
+        let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
+        return str;
+    }
+}
+
+let employee5= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Rana Saleh",
+    department:"Development",
+    level:"Junior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (1000 - 500 + 1) + 500)
+       return (sal-(sal*0.075));
+    },
+    render:function(){
+        let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
+        return str;
+    }
+}
+
+let employee6= {
+    EmployeeId:generateUniqueID(),
+    fullName:"Hadi Ahmad",
+    department:"Finance",
+    level:"Mid-Senior",
+    imgURL: " https://cdn-icons-png.flaticon.com/512/2815/2815428.png ",
+    salary:function(){
+        let sal=  Math.floor(Math.random() * (1500 - 1000 + 1) + 1000)
+        return (sal-(sal*0.075))},
+        render:function(){
+            let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
+            return str;  }
+}
+
+
+document.getElementById("demo").innerHTML = employee0.render();
+document.getElementById("demo1").innerHTML = employee1.render();
+document.getElementById("demo2").innerHTML = employee2.render();
+document.getElementById("demo3").innerHTML = employee3.render();
+document.getElementById("demo4").innerHTML = employee4.render();
+document.getElementById("demo5").innerHTML = employee5.render();
+document.getElementById("demo6").innerHTML = employee6.render();
+
+
+
