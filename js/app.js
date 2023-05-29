@@ -1,14 +1,9 @@
 'use strict';
 
-let idUnique =999; 
-function generateUniqueID(){
-   
-   idUnique=idUnique+1
-    return(idUnique);
-}
+let idUnique=1000;
 
 let employee0= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Ghazi Samer",
     department:"Administration",
     level:"Senior",
@@ -20,12 +15,18 @@ let employee0= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+ "Employee salary: "+this.salary();
         return str;
+    },
+    generateUniqueID:function(){
+        this.EmployeeId=idUnique;
+   idUnique=idUnique+1
+    return(this.EmployeeId);
     }
 }
 
+employee0.generateUniqueID()
 
 let employee1= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
         fullName:"Lana Ali",
     department:"Finance",
     level:"Senior",
@@ -36,11 +37,16 @@ let employee1= {
         render:function(){
             let str="Employee name: "+this.fullName +"<br>"+ "Employee salary: "+this.salary();
             return str;
+        },
+        generateUniqueID:function(){
+            this.EmployeeId=idUnique;
+       idUnique=idUnique+1
+        return(this.EmployeeId);
         }
 }
-
+employee1.generateUniqueID();
 let employee2= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Tamara Ayoub",
     department:"Marketing",
     level:"Senior",
@@ -52,11 +58,16 @@ let employee2= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
         return str;
+    },
+    generateUniqueID:function(){
+        this.EmployeeId=idUnique;
+   idUnique=idUnique+1
+    return(this.EmployeeId);
     }
 }
-
+employee2.generateUniqueID();
 let employee3= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Safi Walid",
     department:"Administration",
     level:"Mid-Senior",
@@ -67,11 +78,16 @@ let employee3= {
         render:function(){
             let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
             return str;
+        },
+        generateUniqueID:function(){
+            this.EmployeeId=idUnique;
+       idUnique=idUnique+1
+        return(this.EmployeeId);
         }
 }
-
+employee3.generateUniqueID();
 let employee4= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Omar Zaid",
     department:"Development",
     level:"Senior",
@@ -83,11 +99,16 @@ let employee4= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
         return str;
+    },
+    generateUniqueID:function(){
+        this.EmployeeId=idUnique;
+   idUnique=idUnique+1
+    return(this.EmployeeId);
     }
 }
-
+employee4.generateUniqueID();
 let employee5= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Rana Saleh",
     department:"Development",
     level:"Junior",
@@ -99,11 +120,17 @@ let employee5= {
     render:function(){
         let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
         return str;
+    },
+    generateUniqueID:function(){
+        this.EmployeeId=idUnique;
+   idUnique=idUnique+1
+    return(this.EmployeeId);
     }
 }
+employee5.generateUniqueID();
 
 let employee6= {
-    EmployeeId:generateUniqueID(),
+    EmployeeId:0,
     fullName:"Hadi Ahmad",
     department:"Finance",
     level:"Mid-Senior",
@@ -113,9 +140,15 @@ let employee6= {
         return (sal-(sal*0.075))},
         render:function(){
             let str="Employee name: "+this.fullName +"<br>"+" Employee salary: "+this.salary();
-            return str;  }
+            return str;  },
+            generateUniqueID:function(){
+                this.EmployeeId=idUnique;
+           idUnique=idUnique+1
+            return(this.EmployeeId);
+            },
+            
 }
-
+employee6.generateUniqueID();
 
 document.getElementById("demo").innerHTML = employee0.render();
 document.getElementById("demo1").innerHTML = employee1.render();
@@ -126,4 +159,4 @@ document.getElementById("demo5").innerHTML = employee5.render();
 document.getElementById("demo6").innerHTML = employee6.render();
 
 
-
+console.log(employee5.EmployeeId);
