@@ -10,7 +10,7 @@ function Employees(employeeName,employeeDep,employeeLevel,img){
     this.employeeImg=img,
 
 
-    ////////////
+    //////////// calculatingSalary method
     this.calculatingSalary =function(){
         if (this.level==="Senior") {
             let max=2000;
@@ -32,7 +32,7 @@ function Employees(employeeName,employeeDep,employeeLevel,img){
  
    allemp.push(this);
 };  
-/////////////
+/////////////generateUniqueID method 
 Employees.prototype.generatingEmployeeID  =   function(){ 
 
     
@@ -73,7 +73,7 @@ divAll.appendChild(divF);
 let header2=document.createElement("h2");
         header2.textContent=("Finance");
         divF.appendChild(header2);
-///////////prototype function
+///////////prototype render method
 Employees.prototype.renderEmp  =   function(){
         let str="Employee name: "+this.fullName +" - "+"ID: "+this.idUnique+" \n "+"Department: "+this.dep+" - "
         +" Employee Level: "+this.level+"\n"+this.calculatingSalary();
@@ -107,7 +107,7 @@ let div1=document.createElement("div");
     };
 
 
-
+////////// style part 
 elem.style.backgroundColor="#C6EBC5";
 divAll.style.display= "flex";
 divA.style.display="inline-block";
