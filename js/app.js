@@ -1,6 +1,5 @@
 'use strict';
-let id=1000;
-const allemp = [];
+
 
 function Employees(employeeName,employeeDep,employeeLevel,img){
     this.idUnique=0,
@@ -142,4 +141,6 @@ for (let i = 0; i < allemp.length; i++) {
     allemp[i].generatingEmployeeID();
     allemp[i].renderEmp();
   }
+
+
 
